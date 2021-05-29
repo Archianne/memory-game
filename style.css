@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +17,7 @@ body {
 
 .box {
   width: 320px;
-  height: 550px;
+  height: 600px;
   background-color: #f8f4eb;
   border: transparent outset 10px;
   border-radius: 10px;
@@ -30,4 +33,10 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 300px;
+}
+
+h1 {
+    font-family: "Lobster", cursive;
+    color: #6490D2;
+    font-size: 2em;
 }
