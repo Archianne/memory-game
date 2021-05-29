@@ -5,7 +5,7 @@ Simple game, made with HTML, CSS and Vanilla JavaScript.
 ### Learn:
 - `push()`
 - `querySelector()`
-- `SetAttribute()`
+- `setAttribute()`
 - `getAttribute()`
 - `appendChild()`
 - `Math.random()`
