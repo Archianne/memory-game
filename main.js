@@ -52,8 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const grid = document.querySelector(".grid");
+  const resultDisplay = document.querySelector("#result");
   let cardsChosen = [];
-  let cardsChosenId  = [];
+  let cardsChosenId = [];
+  let cardsWon = [];
 
   //create board
   let createBoard = () => {
@@ -61,25 +63,46 @@ document.addEventListener("DOMContentLoaded", () => {
       let card = document.createElement("img");
       card.setAttribute("src", "img/blank.png");
       card.setAttribute("data-id", index);
-        // card.addEventListener("click", flipcard);
+      //   card.addEventListener("click", flipcard);
       grid.appendChild(card);
     }
-  }
+  };
 
   //check for matches
+  let checkForMatch = () => {
+    const cards = document.querySelectorAll("img");
+    const optionOneId = cardsChosenId[0];
+    const optionTwoId = cardsChosenId[1];
+
+    if (cardsChosen[0] === cardsChosen[1]) {
+      alert("You found a match");
+      cards[optionOneId].setAttribute("src", "img/white.png");
+      cards[optionTwoId].setAttribute("src", "img/white.png");
+      cardsWon.push(cardsChosen);
+    } else {
+      alert("Try Again");
+      cards[optionOneId].setAttribute("src", "img/blank.png");
+      cards[optionTwoId].setAttribute("src", "img/blank.png");
+    }
+    cardsChosen = [];
+    cardsChosenId = [];
+    resultsDisplay.textContent = cardsWon.length;
+    if (cardsWon.length === cardArray.length/2) {
+        resultDisplay.textContent = 'Congrats'
+    }
+  };
 
   //flip card
   let flipCard = () => {
-      let cardId = this.getAttribute('data-id');
-      cardsChosen.push(cardArray[cardId].name)
-      cardsChosenId.push(cardId)
-      this.setAttribute('src', cardArray[cardId].img)
+    let cardId = this.getAttribute("data-id");
+    cardsChosen.push(cardArray[cardId].name);
+    cardsChosenId.push(cardId);
+    this.setAttribute("src", cardArray[cardId].img);
 
-      if (cardsChosen.length === 2) {
-          setTimeout(checkForMatch, 500)
-      }
-  }
-
+    if (cardsChosen.length === 2) {
+      setTimeout(checkForMatch, 500);
+    }
+  };
 
   createBoard();
 });
