@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+:root {
+    --accent1: #f89e9d;
+    --accent2: #6490D2;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +22,7 @@ body {
 
 .box {
   width: 320px;
-  height: 600px;
+  height: 610px;
   background-color: #f8f4eb;
   border: transparent outset 10px;
   border-radius: 10px;
@@ -37,6 +42,21 @@ body {
 
 h1 {
     font-family: "Lobster", cursive;
-    color: #6490D2;
+    color: var(--accent2);
     font-size: 2em;
+}
+
+p {
+    font-size: 13px;
+    color: #f8f8f8;
+    background-color: var(--accent1);
+}
+
+button {
+    color: #f8f4eb;
+    background-color: var(--accent2);
+    height: 25px;
+    width: 100px;
+    border: none;
+
 }

@@ -58,7 +58,6 @@ let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
 
-//create your board
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement("img");
@@ -69,7 +68,6 @@ function createBoard() {
   }
 }
 
-//check for matches
 function checkForMatch() {
   const cards = document.querySelectorAll("img");
   const optionOneId = cardsChosenId[0];
@@ -92,11 +90,10 @@ function checkForMatch() {
   cardsChosenId = [];
   resultDisplay.textContent = cardsWon.length;
   if (cardsWon.length === cardArray.length / 2) {
-    resultDisplay.textContent = "Congratulations! You found them all!";
+    grid.innerHTML = "Congratulations! You found them all!";
   }
 }
 
-//flip your card
 function flipCard() {
   let cardId = this.getAttribute("data-id");
   cardsChosen.push(cardArray[cardId].name);
