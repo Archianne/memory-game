@@ -4,6 +4,7 @@
 :root {
     --accent1: #f89e9d;
     --accent2: #6490D2;
+    --accent3: #f8f4eb;
 }
 
 * {
@@ -23,7 +24,7 @@ body {
 .box {
   width: 320px;
   height: 610px;
-  background-color: #f8f4eb;
+  background-color: var(--accent3);
   border: transparent outset 10px;
   border-radius: 10px;
   transition: border 300ms ease-in;
@@ -48,12 +49,12 @@ h1 {
 
 p {
     font-size: 13px;
-    color: #f8f8f8;
+    color: var(--accent3);
     background-color: var(--accent1);
 }
 
 button {
-    color: #f8f4eb;
+    color: var(--accent3);
     background-color: var(--accent2);
     height: 25px;
     width: 100px;
