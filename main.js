@@ -58,7 +58,7 @@ let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
 
-function createBoard() {
+let createBoard = () => {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement("img");
     card.setAttribute("src", "img/blank.png");
@@ -68,7 +68,7 @@ function createBoard() {
   }
 }
 
-function checkForMatch() {
+let checkForMatch = () => {
   const cards = document.querySelectorAll("img");
   const optionOneId = cardsChosenId[0];
   const optionTwoId = cardsChosenId[1];
