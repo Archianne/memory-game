@@ -1,0 +1,15 @@
+.box {
+  width: 100vw;
+  border-radius: 0;
+  height: auto;
+}
+
+.grid {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+button {
+  margin-bottom: 20px;
+}

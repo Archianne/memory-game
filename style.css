@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 :root {
-    --accent1: #f89e9d;
-    --accent2: #6490D2;
-    --accent3: #f8f4eb;
+  --accent1: #f89e9d;
+  --accent2: #6490d2;
+  --accent3: #f8f4eb;
 }
 
 * {
@@ -15,19 +15,22 @@ body {
   background-color: #f89e9d;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  margin: 5% auto;
+  margin: auto;
+}
+
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: baseline;
+  align-items: center;
+  height: 100vh;
 }
 
 .box {
   width: 320px;
   height: 610px;
   background-color: var(--accent3);
-  border: transparent outset 10px;
   border-radius: 10px;
-  transition: border 300ms ease-in;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
@@ -42,22 +45,21 @@ body {
 }
 
 h1 {
-    font-family: "Lobster", cursive;
-    color: var(--accent2);
-    font-size: 2em;
+  font-family: "Lobster", cursive;
+  color: var(--accent2);
+  font-size: 2em;
 }
 
 p {
-    font-size: 13px;
-    color: var(--accent3);
-    background-color: var(--accent1);
+  font-size: 13px;
+  color: var(--accent3);
+  background-color: var(--accent1);
 }
 
 button {
-    color: var(--accent3);
-    background-color: var(--accent2);
-    height: 25px;
-    width: 100px;
-    border: none;
-
+  color: var(--accent3);
+  background-color: var(--accent2);
+  height: 25px;
+  width: 100px;
+  border: none;
 }

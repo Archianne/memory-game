@@ -66,7 +66,7 @@ let createBoard = () => {
     card.addEventListener("click", flipCard);
     grid.appendChild(card);
   }
-}
+};
 
 let checkForMatch = () => {
   const cards = document.querySelectorAll("img");
@@ -92,7 +92,7 @@ let checkForMatch = () => {
   if (cardsWon.length === cardArray.length / 2) {
     grid.innerHTML = "Congratulations! You found them all!";
   }
-}
+};
 
 function flipCard() {
   let cardId = this.getAttribute("data-id");
